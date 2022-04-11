@@ -1,0 +1,128 @@
+html {
+  font-family: 'Roboto', Arial, sans-serif;
+}
+
+body {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 14px;
+  padding-top: 20px;
+  font-weight: 400;
+}
+
+main {
+  max-width: 978px;
+  margin: 0 auto;
+  padding: 32px;
+}
+
+h2, h3 {
+  color: #3c4043;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 2rem;
+  margin: 0;
+}
+
+h2 + p, h3 + p {
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 1.5rem;
+  padding-top: 4rem;
+}
+
+h3 {
+  font-size: 16px;
+  padding-top: 3rem;
+}
+
+p, li {
+  line-height: 1.5rem;
+}
+
+p {
+  margin: 10px 0;
+  padding-top: 20px;
+}
+
+li {
+  padding: 12px 0 0 16px;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  background: #fff;
+  color: #5f6368;
+  border-bottom: 1px solid #97979780;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 12px 20px;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo span {
+  font-family: 'Gilroy', sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: -.5px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+nav ul a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  display: flex;
+}
+
+button.app {
+  margin-left: auto;
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  text-align: inherit;
+  text-decoration: inherit;
+
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+
+  display: flex;
+}
+
+button.app:hover {
+  background: #f0f0f0;
+}
+
+.app svg {
+  width: 1.5rem;
+  margin: auto;
+}

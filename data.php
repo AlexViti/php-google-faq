@@ -1,4 +1,29 @@
 <?php
+# HEADER
+
+$title = [
+  'it' => 'Privacy e termini',
+  'en' => 'Privacy & terms'
+];
+
+$headerNav = [
+  'it' => [
+    'Introduzione' => '#',
+    'Norme sulla privacy' => '#',
+    'Termini di servizio' => '#',
+    'Tecnologie' => '#',
+    'Domande frequenti' => 'index.php'
+  ],
+  'en' => [
+    'Overview' => '#',
+    'Privacy policy' => '#',
+    'Terms of service' => '#',
+    'Technologies' => '#',
+    'FAQ' => 'index.php'
+  ]
+];
+
+#MAIN 
 $faqs = [
   "it" => [
       [
@@ -92,7 +117,7 @@ $faqs = [
     echo "<h$h>$faq[question]</h$h>";
     if(is_array($faq['answer'])) {
       foreach($faq['answer'] as $answer) {
-        echo "<p>$answer</p>";
+        echo substr($answer, 0, 4) === '<ol>' ? $answer : "<p>$answer</p>";
       }
     } else {
       echo "<p>$faq[answer]</p>";
