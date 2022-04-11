@@ -40,8 +40,9 @@ $faqs = [
     ]
   ];
 
-  foreach($faqs as $faq) {
-    echo "<h2>$faq[question]</h2>";
+  function faqPrint($faq, $h) {
+    $h++;
+    echo "<h$h>$faq[question]</h$h>";
     if(is_array($faq['answer'])) {
       foreach($faq['answer'] as $answer) {
         echo "<p>$answer</p>";
@@ -50,14 +51,11 @@ $faqs = [
       echo "<p>$faq[answer]</p>";
     }
     if(isset($faq['subSection'])) {
-      $subquestion = $faq['subSection']['question'];
-      echo "<h3>$subquestion</h3>";
-      if(is_array($faq['subSection']['answer'])) {
-        foreach($faq['subSection']['answer'] as $answer) {
-          echo "<p>$answer</p>";
-        }
-      } else {
-        echo "<p>$faq[subSection][answer]</p>";
-      }
+      $subSection = $faq['subSection'];
+      faqPrint($subSection, $h);
     }
+  }
+
+  foreach($faqs as $faq) {
+    faqPrint($faq, 1);
   }
